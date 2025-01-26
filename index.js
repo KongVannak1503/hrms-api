@@ -9,6 +9,7 @@ const fs = require('fs');
 
 const app = express();
 const departmentRoutes = require('./src/routes/DepartmentRoute');
+const managerRoutes = require('./src/routes/ManagerRoute');
 
 // Middleware
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use(cors());
 
 //api
 app.use('/api/department', departmentRoutes);
+app.use('/api/manager', managerRoutes);
 
 
 
